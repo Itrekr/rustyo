@@ -1,6 +1,6 @@
 [package]
 name = "rustyo"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["Oscar Scheepers <itrekr@oscar.cc>"]
 description = "A simple radio that uses mpv to play radio streams from publically available internet radiostations."
