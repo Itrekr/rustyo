@@ -1,8 +1,8 @@
-#+title: Rustio
+#+title: Rustyo
 
 * About
 
-Rustio is a simple radio that uses mpv to play radio streams from publically available radiostations.
+Rustyo is a simple radio that uses mpv to play radio streams from publically available radiostations.
 
 * Installation
 
@@ -11,11 +11,11 @@ Rustio is a simple radio that uses mpv to play radio streams from publically ava
 Clone the repo and navigate to it with:
 
 #+begin_src bash
-git clone https://github.com/itrekr/rustio
-cd rustio
+git clone https://github.com/itrekr/rustyo
+cd rustyo
 #+end_src
 
-Then run cargo build to compile, after which the binary 'rustio' can be found in the target/release folder:
+Then run cargo build to compile, after which the binary 'rustyo' can be found in the target/release folder:
 
 #+begin_src bash
 cargo build --release
@@ -28,19 +28,19 @@ Linux users can then move the binary to their path of choice.
 Once installed you can list the radiostations with the 'list' command like so:
 
 #+begin_src bash
-rustio list
+rustyo list
 #+end_src
 
 Pick any of the stations and run it with:
 
 #+begin_src bash
-rustio stationname
+rustyo stationname
 #+end_src
 
 To stop the radiostation you can run either of the following commands:
 
 #+begin_src bash
-rustio none
+rustyo none
 killall mpv
 #+end_src
 
