@@ -8,6 +8,14 @@ Rustyo is a simple radio that uses mpv to play radio streams from publically ava
 
 ** With cargo
 
+Make sure .cargo/bin is in your path and run:
+
+#+begin_src bash
+cargo install rustyo
+#+end_src
+
+** Manual installation
+
 Clone the repo and navigate to it with:
 
 #+begin_src bash
