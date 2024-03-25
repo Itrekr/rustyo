@@ -1,65 +1,63 @@
-#+title: Rustyo
-
-* About
+# About
 
 Rustyo is a simple radio that uses mpv to play radio streams from publically available radiostations.
 
-* Installation
+# Installation
 
-** With cargo
+## With cargo
 
 Make sure .cargo/bin is in your path and run:
 
-#+begin_src bash
+```
 cargo install rustyo
-#+end_src
+```
 
-** Manual installation
+## Manual installation
 
 Clone the repo and navigate to it with:
 
-#+begin_src bash
+```
 git clone https://github.com/itrekr/rustyo
 cd rustyo
-#+end_src
+```
 
 Then run cargo build to compile, after which the binary 'rustyo' can be found in the target/release folder:
 
-#+begin_src bash
+```
 cargo build --release
-#+end_src
+```
 
 Linux users can then move the binary to their path of choice.
 
-* Usage
+# Usage
 
 Once installed you can list the radiostations with the 'list' command like so:
 
-#+begin_src bash
+```
 rustyo list
-#+end_src
+```
 
 Pick any of the stations and run it with:
 
-#+begin_src bash
+```
 rustyo stationname
-#+end_src
+```
 
 To stop the radiostation you can run either of the following commands:
 
-#+begin_src bash
+```
 rustyo none
 killall mpv
-#+end_src
+```
 
 
-* Adding stations
+# Adding stations
 
 Any stream that can be played with 'mpv' should function. In the resources folder you find the stations.csv file which contains all the names and the streaming url's of the different stations. All you have to do to add a station is add a newline with the name and the corresponding streaming url seperated by a comma. After that, recompile the project like so:
 
-#+begin_src bash
+```
 cargo clean
 cargo build --release
-#+end_src
+```
 
 Don't forget to then move the new binary to your path of choice again, as that won't update automatically.
