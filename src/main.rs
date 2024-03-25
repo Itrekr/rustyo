@@ -1,7 +1,8 @@
 use std::collections::HashMap;
 use std::env;
-use std::process::{Command, Stdio};
-use std::io;
+use std::fs::{self, File};
+use std::io::{self, Write};
+use std::process::{Command, Stdio, Child};
 use csv;
 
 fn csv_to_dict() -> HashMap<String, String> {
@@ -19,20 +20,40 @@ fn csv_to_dict() -> HashMap<String, String> {
     csv_dict
 }
 
+fn manage_mpv_process(action: &str, pid: Option<u32>) {
+    let pid_file_path = "/tmp/rustyo_stream.pid";
+    match action {
+        "write" => {
+            if let Some(pid) = pid {
+                let mut file = File::create(pid_file_path).expect("Failed to create PID file");
+                writeln!(file, "{}", pid).expect("Failed to write PID to file");
+            }
+        },
+        "kill" => {
+            if let Ok(pid) = fs::read_to_string(pid_file_path) {
+                let pid: u32 = pid.trim().parse().expect("Failed to parse PID");
+                Command::new("kill").arg(format!("{}", pid)).output().expect("Failed to kill mpv process");
+                fs::remove_file(pid_file_path).expect("Failed to remove PID file");
+            }
+        },
+        _ => eprintln!("Invalid action for managing mpv process"),
+    }
+}
 
 fn play_radio(radio_station: &str, radio_station_dict: &HashMap<String, String>) {
     let radio_station_lower = radio_station.to_lowercase();
     if let Some(url) = radio_station_dict.get(&radio_station_lower) {
-        let _ = Command::new("pkill")
-            .arg("mpv")
-            .output();
+        manage_mpv_process("kill", None);
 
         println!("Playing: {}", radio_station);
-        let _ = Command::new("mpv")
+        let child: Child = Command::new("mpv")
             .arg(url)
             .stdout(Stdio::null())
             .stderr(Stdio::null())
-            .spawn();
+            .spawn()
+            .expect("mpv failed to start");
+
+        manage_mpv_process("write", Some(child.id()));
     } else {
         eprintln!("Radio station not found.");
     }
@@ -58,7 +79,7 @@ fn main() {
             println!("{}", station);
         }
     } else if user_input == "none" {
-        Command::new("sh").arg("-c").arg("killall mpv").spawn().unwrap();
+        manage_mpv_process("kill", None);
     } else {
         println!("This radio station is not in our list.");
     }
