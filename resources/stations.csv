@@ -20,7 +20,7 @@ Disney,https://listen.radioking.com/radio/453221/stream/508076
 DnB,https://air.dnbfm.ru/listen/player/play
 Electronic,https://stream.mixadance.fm/mixadance
 Eurobeat,http://79.120.39.202:9159/listen.pls
-Fallout,https://fallout.fm:8444/falloutfm6.ogg
+Fallout4,https://fallout.fm:8444/falloutfm6.ogg
 Fallout3,https://fallout.fm:8444/falloutfm2.ogg
 FalloutClassical,https://fallout.fm:8444/falloutfm7.ogg
 Funk,http://funk2disco.stream.laut.fm/funk2disco?uuid=94dfa57d-4bbe-486c-ba24-4f7c80cd446e
@@ -32,7 +32,7 @@ Hip-hop,https://converter.titsrp.com/thetrap/
 House,https://hirschmilch.de:7001/prog-house.mp3
 Icelandic,http://netradio.ruv.is/ras1.aac.m3u
 Infowars,http://173.226.180.143/alexjonesshow-mp3
-Israeli,http://glzwizzlv.bynetcdn.com/glglz_mp3
+Galgalatz,http://glzwizzlv.bynetcdn.com/glglz_mp3
 Jazz,https://jfm1.hostingradio.ru:14536/ijstream.mp3
 Jumpstyle,http://lw2.mp3.tb-group.fm/tb.mp3
 Christmas,https://christmasfm.cdnstream1.com/2550_128.mp3?aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1605423292
@@ -61,10 +61,17 @@ Ruspunk,http://nashe1.hostingradio.ru/nashepunks.mp3
 Sinterklaas,https://stream06.dotpoint.nl:8004/stream
 Smoothjazz,http://www.101smoothjazz.com/101-smoothjazz.m3u
 Sovietwave,http://station.waveradio.org/soviet.mp3
-Synthwave,https://laut.fm/nightdrive
-Thunderstorm,https://www.youtube.com/watch?v=cI0zN1nG3PQ --no-video
+Synthwave,https://synthwave.stream.laut.fm/synthwave
 Trance,http://strm112.1.fm/atr_mobile_mp3
 USSR,http://pub0302.101.ru:8000/stream/pro/aac/64/46
 Vaporwave,http://radio.plaza.one/opus
 Vikingmetal,http://79.111.14.76:8000/vikingmetal.m3u
 Zeeland,https://d3isaxd2t6q8zm.cloudfront.net/icecast/omroepzeeland/omroepzeeland_radio
+Quran,http://server4.streamserver24.com:21494/stream/1/
+Oriental,https://rautemusik-de-hz-fal-stream14.radiohost.de/oriental
+Nativeamerican,http://79.111.119.111:8002/nativeamerican
+Schlager,https://schlager.stream.laut.fm/schlager
+Jodel,https://radiotell.dmd2streaming.com/radiotell04.mp3
+Drill,https://stream.laut.fm/drill
+Punk,https://hardcore.stream.laut.fm/hardcore
+Gabber,https://stream.technolovers.fm/gabber

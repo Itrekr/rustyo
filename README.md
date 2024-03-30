@@ -61,3 +61,7 @@ cargo build --release
 ```
 
 Don't forget to then move the new binary to your path of choice again, as that won't update automatically.
+
+# Feedback and improvements
+
+Feel free to submit issues, additional stations or improvements on GitHub.
